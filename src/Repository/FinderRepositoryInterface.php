@@ -13,6 +13,15 @@ use yii\db\ActiveRecordInterface;
 interface FinderRepositoryInterface
 {
     /**
+     * Find all records.
+     *
+     * @param ActiveRecordInterface $ar The ActiveRecord model class.
+     *
+     * @return array The found records.
+     */
+    public function findAll(ActiveRecordInterface $ar): array;
+
+    /**
      * Find a record by its primary key.
      *
      * @param ActiveRecordInterface $ar The ActiveRecord model class.
