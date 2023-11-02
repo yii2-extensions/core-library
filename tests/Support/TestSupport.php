@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Yii\CoreLibrary\Tests\Support;
 
 use Yii;
-use Yii\CoreLibrary\Tests\Support\ActiveRecord\Stub;
-use yii\db\ActiveRecordInterface;
 use yii\db\Connection;
 use yii\db\SchemaBuilderTrait;
 use yii\web\Application;
