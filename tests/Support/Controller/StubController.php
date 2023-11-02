@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Yii\CoreLibrary\Tests\Support\Controller;
 
-use yii\base\Model;
 use Yii\CoreLibrary\Validator\AjaxValidator;
 use yii\web\Controller;
 

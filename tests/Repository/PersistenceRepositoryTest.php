@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 use Yii\CoreLibrary\Repository\PersistenceRepository;
 use Yii\CoreLibrary\Tests\Support\ActiveRecord\Stub;
 use Yii\CoreLibrary\Tests\Support\TestSupport;
-use yii\db\Expression;
 
 final class PersistenceRepositoryTest extends TestCase
 {
