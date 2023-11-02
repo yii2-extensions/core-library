@@ -32,7 +32,13 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.0.x-dev"
+            "dev-master": "1.0.x-dev"
+        },
+        "config-plugin": {
+            "yii2-core-library": "container.php"
+        },
+        "config-plugin-options": {
+            "source-directory": "config"
         }
     },
     "config": {
