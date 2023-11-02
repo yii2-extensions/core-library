@@ -17,8 +17,8 @@
         <img src="https://github.com/yii2-extensions/core-library/actions/workflows/build.yml/badge.svg" alt="PHPUnit">
     </a>
     <a href="https://codecov.io/gh/yii2-extensions/core-library" target="_blank">
-        <img src="https://codecov.io/gh/yii2-extensions/core-library/branch/main/graph/badge.svg?token=MF0XUGVLYC" alt="Codecov">
-    </a>
+        <img src="https://codecov.io/gh/yii2-extensions/core-library/graph/badge.svg?token=kt9yc7N1aw" alt="Codecov">
+    </a>    
     <a href="https://github.com/yii2-extensions/core-library/actions/workflows/static.yml" target="_blank">
         <img src="https://github.com/yii2-extensions/gii/actions/workflows/static.yml/badge.svg" alt="PHPStan">
     </a>
