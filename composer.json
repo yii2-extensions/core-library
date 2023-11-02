@@ -1,9 +1,12 @@
 {
-    "name": "yii2/template",
+    "name": "yii2-extensions/core-library",
     "type": "library",
-    "description": "_____",
+    "description": "Central repository for shared library code.",
     "keywords": [
-        "_____"
+        "central",
+        "library",
+        "shared",
+        "yii2"
     ],
     "license": "mit",
     "minimum-stability": "dev",
@@ -19,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "yii\\template\\": "src"
+            "Yii\\CoreLibrary\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "yii\\template\\tests\\": "tests"
+            "Yii\\CoreLibrary\\Tests\\": "tests"
         }
     },
     "extra": {
