@@ -14,6 +14,25 @@ final class FinderRepositoryTest extends TestCase
 {
     use TestSupport;
 
+    public function testFindAll(): void
+    {
+        $ar = new Stub();
+
+        $ar->content = 'tests';
+
+        $this->assertTrue($ar->save());
+
+        $finderRepository = new FinderRepository();
+
+        $result = $finderRepository->findAll($ar);
+
+        $this->assertIsArray($result);
+        $this->assertCount(1, $result);
+        $this->assertInstanceOf(ActiveRecordInterface::class, $result[0]);
+        $this->assertSame(1, $result[0]->id);
+        $this->assertSame('tests', $result[0]->content);
+    }
+
     public function testFindById(): void
     {
         $ar = new Stub();
