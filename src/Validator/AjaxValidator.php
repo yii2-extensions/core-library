@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\CoreLibrary\Validator;
 
+use Yii;
 use yii\base\ExitException;
 use yii\base\Model;
-use yii\web\Application;
 use yii\web\Request;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
@@ -17,7 +17,6 @@ use yii\widgets\ActiveForm;
 final class AjaxValidator
 {
     public function __construct(
-        private readonly Application $app,
         private readonly Request $request,
         private readonly Response $response
     ) {
@@ -37,7 +36,7 @@ final class AjaxValidator
             $this->response->data = ActiveForm::validate($model);
             $this->response->send();
 
-            $this->app->end();
+            Yii::$app->end();
         }
     }
 }
