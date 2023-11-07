@@ -28,7 +28,7 @@ final class AjaxValidatorTest extends TestCase
 
         $response = $this->createMock(Response::class);
 
-        $ajaxValidator = new AjaxValidator($request, $response);
+        $ajaxValidator = new AjaxValidator(Yii::$app, $request, $response);
         $stubController = new StubController('stub', Yii::$app, $ajaxValidator);
 
         $model = $this->createMock(Model::class);
