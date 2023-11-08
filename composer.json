@@ -1,6 +1,6 @@
 {
     "name": "yii2-extensions/core-library",
-    "type": "library",
+    "type": "yii2-extension",
     "description": "Central repository for shared library code.",
     "keywords": [
         "central",
@@ -35,7 +35,7 @@
             "dev-master": "1.0.x-dev"
         },
         "config-plugin": {
-            "yii2-core-library": "container.php"
+            "yii2-core-library": "extension.php"
         },
         "config-plugin-options": {
             "source-directory": "config"
