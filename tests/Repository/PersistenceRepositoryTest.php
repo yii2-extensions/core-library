@@ -51,6 +51,22 @@ final class PersistenceRepositoryTest extends TestCase
         $this->assertNull($ar->id);
     }
 
+    public function testUpdate(): void
+    {
+        $ar = new Stub();
+
+        $ar->content = 'tests';
+
+        $this->assertTrue($ar->save());
+
+        $persistenceRepository = new PersistenceRepository();
+
+        $ar->content = 'updated';
+
+        $this->assertTrue($persistenceRepository->update($ar));
+        $this->assertSame('updated', $ar->content);
+    }
+
     public function testUpdateAttribute(): void
     {
         $ar = new Stub();

@@ -34,6 +34,18 @@ interface PersistenceRepositoryInterface
     /**
      * Update records based on a set of conditions.
      *
+     * @param ActiveRecordInterface $ar The ActiveRecord model class.
+     * @param bool $runValidation Whether to perform validation before saving the record.
+     * @param array|null $attributeNames List of attributes that need to be saved. Defaults to null,
+     * meaning all attributes that are loaded from DB will be saved.
+     *
+     * @return bool Whether the update was successful.
+     */
+    public function update(ActiveRecordInterface $ar, bool $runValidation = true, array $attributeNames = null): bool;
+
+    /**
+     * Update records based on a set of conditions.
+     *
      * @param ActiveRecord $ar The ActiveRecord model class.
      * @param array $attributes The attribute values (name-value pairs) to be saved.
      *
