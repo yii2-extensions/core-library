@@ -14,9 +14,17 @@ final class PersistenceRepository extends Repository implements PersistenceRepos
         return $this->execute($ar->getDb(), static fn (): bool => $ar->deleteAll($condition) > 0);
     }
 
-    public function save(ActiveRecordInterface $ar): bool
+    public function save(ActiveRecordInterface $ar, bool $runValidation = true, array $attributeNames = null): bool
     {
-        return $this->execute($ar->getDb(), static fn (): bool => $ar->save());
+        return $this->execute($ar->getDb(), static fn (): bool => $ar->save($runValidation, $attributeNames));
+    }
+
+    public function update(ActiveRecordInterface $ar, bool $runValidation = true, array $attributeNames = null): bool
+    {
+        return $this->execute(
+            $ar->getDb(),
+            static fn (): bool => $ar->update($runValidation, $attributeNames) > 0,
+        );
     }
 
     public function updateAtttributes(ActiveRecord $ar, array $attributes): bool
