@@ -13,6 +13,15 @@ use yii\db\ActiveRecordInterface;
 interface PersistenceRepositoryInterface
 {
     /**
+     * Delete a record from the data store.
+     *
+     * @param ActiveRecordInterface $ar The ActiveRecord model instance to be deleted.
+     *
+     * @return bool Whether the deletion was successful.
+     */
+    public function delete(ActiveRecordInterface $ar): bool;
+
+    /**
      * Delete records based on a set of conditions.
      *
      * @param ActiveRecordInterface $ar The ActiveRecord model class.
