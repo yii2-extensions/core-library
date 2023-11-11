@@ -13,6 +13,20 @@ final class PersistenceRepositoryTest extends TestCase
 {
     use TestSupport;
 
+    public function testDelete(): void
+    {
+        $ar = new Stub();
+
+        $ar->content = 'tests';
+
+        $this->assertTrue($ar->save());
+
+        $persistenceRepository = new PersistenceRepository();
+
+        $this->assertTrue($persistenceRepository->delete($ar));
+        $this->assertNull($ar->findOne(1));
+    }
+
     public function testDeleteAll(): void
     {
         $ar = new Stub();

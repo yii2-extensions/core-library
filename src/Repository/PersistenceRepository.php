@@ -9,6 +9,11 @@ use yii\db\ActiveRecordInterface;
 
 final class PersistenceRepository extends Repository implements PersistenceRepositoryInterface
 {
+    public function delete(ActiveRecordInterface $ar): bool
+    {
+        return $this->execute($ar->getDb(), static fn (): bool => $ar->delete() > 0);
+    }
+
     public function deleteAll(ActiveRecordInterface $ar, array $condition): bool
     {
         return $this->execute($ar->getDb(), static fn (): bool => $ar->deleteAll($condition) > 0);
