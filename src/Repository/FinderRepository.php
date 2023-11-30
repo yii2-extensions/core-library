@@ -9,6 +9,11 @@ use yii\db\ActiveRecordInterface;
 
 final class FinderRepository implements FinderRepositoryInterface
 {
+    public function find(ActiveRecordInterface $ar): ActiveQueryInterface
+    {
+        return $ar->find();
+    }
+
     public function findAll(ActiveRecordInterface $ar): array
     {
         return $ar->find()->all();
