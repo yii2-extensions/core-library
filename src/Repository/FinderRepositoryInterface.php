@@ -13,6 +13,15 @@ use yii\db\ActiveRecordInterface;
 interface FinderRepositoryInterface
 {
     /**
+     * Return a query object for further refinement or execution.
+     *
+     * @param ActiveRecordInterface $ar The ActiveRecord model class.
+     *
+     * @return ActiveQueryInterface A query object for further refinement or execution.
+     */
+    public function find(): ActiveQueryInterface;
+
+    /**
      * Find all records.
      *
      * @param ActiveRecordInterface $ar The ActiveRecord model class.
