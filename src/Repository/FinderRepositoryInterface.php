@@ -19,7 +19,7 @@ interface FinderRepositoryInterface
      *
      * @return ActiveQueryInterface A query object for further refinement or execution.
      */
-    public function find(): ActiveQueryInterface;
+    public function find(ActiveRecordInterface $ar): ActiveQueryInterface;
 
     /**
      * Find all records.
