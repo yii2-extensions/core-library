@@ -19,12 +19,12 @@ final class FinderRepository implements FinderRepositoryInterface
         return $ar->find()->all();
     }
 
-    public function findById(ActiveRecordInterface $ar, int $id, string $key = 'id'): ActiveRecordInterface|array|null
+    public function findById(ActiveRecordInterface $ar, int $id, string $key = 'id'): ActiveRecordInterface|null
     {
         return $this->findByOneCondition($ar, [$key => $id]);
     }
 
-    public function findByOneCondition(ActiveRecordInterface $ar, array $condition): ActiveRecordInterface|array|null
+    public function findByOneCondition(ActiveRecordInterface $ar, array $condition): ActiveRecordInterface|null
     {
         return $ar->findOne($condition);
     }
