@@ -37,9 +37,9 @@ interface FinderRepositoryInterface
      * @param int $id The primary key value.
      * @param string $key The name of the primary key attribute (default is 'id').
      *
-     * @return ActiveRecordInterface|array|null The found record, or null if not found.
+     * @return ActiveRecordInterface|null The found record, or null if not found.
      */
-    public function findById(ActiveRecordInterface $ar, int $id, string $key = 'id'): ActiveRecordInterface|array|null;
+    public function findById(ActiveRecordInterface $ar, int $id, string $key = 'id'): ActiveRecordInterface|null;
 
     /**
      * Find a single record by a specific condition.
@@ -47,9 +47,9 @@ interface FinderRepositoryInterface
      * @param ActiveRecordInterface $ar The ActiveRecord model class.
      * @param array $condition The condition to search by.
      *
-     * @return ActiveRecordInterface|array|null The found record, or null if not found.
+     * @return ActiveRecordInterface|null The found record, or null if not found.
      */
-    public function findByOneCondition(ActiveRecordInterface $ar, array $condition): ActiveRecordInterface|array|null;
+    public function findByOneCondition(ActiveRecordInterface $ar, array $condition): ActiveRecordInterface|null;
 
     /**
      * Find records that match a set of conditions.
