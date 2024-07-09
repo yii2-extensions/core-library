@@ -17,7 +17,7 @@
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^4.6",
-        "phpunit/phpunit": "^10.2",
+        "phpunit/phpunit": "^11.2",
         "yii2-extensions/phpstan": "dev-main"
     },
     "autoload": {
